@@ -1,0 +1,69 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Flexible Framework Support",
+    description:
+      "Empower your projects with our adaptable framework support, ensuring compatibility with a wide range of development tools and methodologies for greater flexibility and efficiency.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Efficient Static Rendering",
+    description:
+      "Enhance your website's performance and user experience with our streamlined static rendering process, delivering lightning-fast load times and smooth navigation.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Dynamic Component Hydration",
+    description:
+      "Delight your users with dynamic interactions powered by our intelligent component hydration, providing seamless functionality exactly when and where it's needed.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Seamless Integration",
+    description:
+      "Integrate effortlessly with our platform, enabling smooth collaboration and interoperability across various development environments and tools for a cohesive workflow.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "SEO Optimization",
+    description:
+      "Boost your online presence and visibility with our built-in SEO optimization features, ensuring that your website ranks higher in search engine results and attracts more organic traffic.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Versatile Service Offerings",
+    description:
+      "Explore a diverse range of services including e-commerce solutions, landing page development, portfolio creation, menu design, and more. Whatever your project needs, we have the expertise to bring it to life.",
+    icon: "bx:bxs-star",
+  },
+];
+
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Empowering Your Ideas into code
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Partnering with us streamlines your online presence and empowers you to craft indispensable digital tools for your business.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
